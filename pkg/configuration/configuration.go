@@ -122,6 +122,7 @@ func (p *Parameters) ValidateNamespaces(ctx context.Context, namespaces []string
 			p.Logger.Warn(
 				fmt.Sprintf("namespaces %+v not present in cluster, skipping those namespaces",
 					nonExistentNs.UnsortedList()))
+
 			userNsSet = userNsSet.Difference(nonExistentNs)
 		}
 	}
